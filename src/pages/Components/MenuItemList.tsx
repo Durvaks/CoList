@@ -4,6 +4,7 @@ import React, { Fragment } from "react";
 
 type Components_menu = {
     stats: string;
+    key: number;
 };
 
 

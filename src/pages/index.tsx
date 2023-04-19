@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
       </Head>
-      <div className=" bg-gray-900">
+      <div className="bg-gray-900">
         <div className={logado ? "hidden" : ""} >
           <LoginScreen />
         </div>
