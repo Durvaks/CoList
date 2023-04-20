@@ -2,7 +2,7 @@ import Head from "next/head"
 import LoginScreen from "./LoginScreen"
 import Main from "./Main"
 
-let logado = true;
+let logado = false;
 
 export default function Home() {
   return (

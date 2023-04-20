@@ -5,13 +5,9 @@ import ItemList from "./Components/ItemList";
 import React, { Fragment, useState } from "react";
 import { PlusIcon } from "@heroicons/react/20/solid";
 
-type itemComponents = {
-    description: string;
-    stats: string;
-};
-
-
 const Main = () => {
+    
+    
 
     return (
         <div className="h-screen bg-[#8a8971] max-w-xl relative overflow-hidden m-auto shadow-md shadow-slate-200 rounded-t-md">
