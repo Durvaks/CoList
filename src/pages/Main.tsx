@@ -1,101 +1,18 @@
 import MenuList from "./Components/MenuList";
 import MenuUser from "./Components/MenuUser";
-import Lists from "./Components/Lists";
+import Lists from "./Components/ListsMenu";
 import ItemList from "./Components/ItemList";
+import React, { Fragment, useState } from "react";
+import { PlusIcon } from "@heroicons/react/20/solid";
 
-interface Data {
+type itemComponents = {
     description: string;
     stats: string;
-  }
+};
 
-const data: Data[] = [
-    {
-        description: "um texto qualquer",
-        stats: "done"
-    },
-    {
-        description: "um texto qualquer",
-        stats: "done"
-    },
-    {
-        description: "um texto qualquer",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    },
-    {
-        description: "no text",
-        stats: "done"
-    }
-];
-
-
-
-function getList(){  
-    return (
-        <ul>
-            {data.map((item, index)=>{
-                    return <ItemList description={item.description} stats={item.stats} key={index}/> 
-                })}
-        </ul>
-    )
-}
 
 const Main = () => {
+
     return (
         <div className="h-screen bg-[#8a8971] max-w-xl relative overflow-hidden m-auto shadow-md shadow-slate-200 rounded-t-md">
             <h1 className="text-[#ffffff] bg-[#26250d] p-1 pl-5 text-[24px] rounded-t-md ">Colist</h1>
@@ -104,7 +21,7 @@ const Main = () => {
                 <MenuList />
             </div>
             <main id="main_content_current_list" className=" max-h-screen overflow-y-scroll">
-                {getList()}
+                <ItemList description="Descrição qualquer" stats="done"/>
             </main>
             <div className="flex gap-28 items-end justify-between absolute w-full bottom-0 p-3 text-[#ffffff] bg-[#8a8971] ">
                 <div className="w-full ">
@@ -114,6 +31,11 @@ const Main = () => {
                     <Lists />
                 </div>
             </div>
+            <button className="absolute border-2 w-20 h-20 right-10 bottom-20 rounded-full"
+            onClick={()=>{}}
+            >
+                <PlusIcon className=" text-white"/>
+            </button>
         </div>
     )
 }
