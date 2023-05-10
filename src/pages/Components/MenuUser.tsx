@@ -3,6 +3,11 @@ import { Fragment } from 'react'
 import { AdjustmentsVerticalIcon, ChevronUpDownIcon, PencilIcon, ShareIcon } from '@heroicons/react/20/solid'
 
 const MenuList = () => {
+    function handlerLogout(){
+        document.cookie = "colistPass=none";
+        window.location.href = "http://localhost:3000";
+    }
+    
     return (
         <Menu as="div" className="text-left">
             <div>
@@ -52,7 +57,18 @@ const MenuList = () => {
                                     Alterar Senha
                                 </button>
                             )}
-                        </Menu.Item>                        
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <button 
+                                className={`${active ? 'bg-[#7e7b31] text-white' : 'text-gray-900'} group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                onClick={handlerLogout}
+                                >
+                                    <AdjustmentsVerticalIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+                                    Logout
+                                </button>
+                            )}
+                        </Menu.Item>                          
                     </div>
                 </Menu.Items>
             </Transition>

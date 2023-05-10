@@ -5,9 +5,7 @@ import ItemList from "./Components/ItemList";
 import React, { Fragment, useState } from "react";
 import { PlusIcon } from "@heroicons/react/20/solid";
 
-const Main = () => {
-    
-    
+const Main = () => {  
 
     return (
         <div className="h-screen bg-[#8a8971] max-w-xl relative overflow-hidden m-auto shadow-md shadow-slate-200 rounded-t-md">
@@ -17,7 +15,7 @@ const Main = () => {
                 <MenuList />
             </div>
             <main id="main_content_current_list" className=" max-h-screen overflow-y-scroll">
-                <ItemList description="Descrição qualquer" stats="done"/>
+{"aqui ficará o conteudo"}
             </main>
             <div className="flex gap-28 items-end justify-between absolute w-full bottom-0 p-3 text-[#ffffff] bg-[#8a8971] ">
                 <div className="w-full ">
