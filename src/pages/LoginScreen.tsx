@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const LoginScreen = ()=> {
 
   const login = (event:Event)=>{
@@ -19,7 +21,7 @@ const LoginScreen = ()=> {
               </form>
               <div className="flex justify-around pt-8 text-sm">
                 <a className="mr-5" href="#">Esqueci Minha Senha</a>
-                <a className="ml-5" href="/UserRegister">Cadastrar</a>
+                <Link href="/UserRegister"><a className="ml-5" >Cadastrar</a></Link>
               </div>
             </div>
           </div>
